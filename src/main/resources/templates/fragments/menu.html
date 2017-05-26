@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div th:fragment="menu" class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+
+				<div class="navbar-header pull-left">
+					<a class="navbar-brand" href="#">SPRING BOILERPLATE</a>
+				</div>
+
+				<ul th:if="${errorMessage == null}" class="nav navbar-nav pull-right">
+					<li sec:authorize="!isAuthenticated()"><a href="/auth/login" th:href="@{/auth/login}">ログイン</a></li>
+					<li sec:authorize="isAuthenticated()"><a href="/content" th:href="@{/content}">コンテンツ</a></li>
+					<li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin" th:href="@{/admin}">管理ページ</a></li>
+					<li sec:authorize="isAuthenticated()"><a href="/auth/logout" th:href="@{/auth/logout}">ログアウト</a></li>
+				</ul>
+
+				<ul th:unless="${errorMessage == null}" class="nav navbar-nav pull-right">
+					<li><a href="/" th:href="@{/}">戻る</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
