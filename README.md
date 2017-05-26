@@ -4,8 +4,7 @@
 #### プロジェクトの内容に合わせて以下のブランチより取得してください
 
 - simple-security  
-
-Spring Security を使用したID/パスワードで認証するテンプレート
+    Spring Security を使用したID/パスワードで認証するテンプレート
 
 
 #### 共通仕様
