@@ -1,4 +1,4 @@
-## Spring ｆramework を使用する際にプロジェクトテンプレート
+## Spring framework を使用する際にプロジェクトテンプレート
 
 
 #### プロジェクトの内容に合わせて以下のブランチより取得してください
@@ -10,7 +10,9 @@ Spring Security を使用したID/パスワードで認証するテンプレー�
 #### 共通仕様
 
 ##### 利用ライブラリ
+
 - Thymeleaf
 - Lombok
 - Tomcat
 - Maven2
+
