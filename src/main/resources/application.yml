@@ -12,11 +12,11 @@ spring:
   mvc:
     date-format: yyyy/MM/dd
 
-  #JDBC
-  #datasource:
-    #url: jdbc:sqlserver://172.0.0.1;databaseName=DatabaseName
-    #username: hoge
-    #password: fuga
+  #JDBC (設定がひとつ必要なので用意しておく、必要に応じて違うデータベース用に書き換えること）
+  datasource:
+    url: jdbc:sqlserver://172.0.0.1;databaseName=DatabaseName
+    username: hoge
+    password: fuga
     #driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     #max-wait: 5000
     #max-active: 200
